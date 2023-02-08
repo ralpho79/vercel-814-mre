@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
-        list_to_csv(input_text,"example.csv")
+        text = request.form["input_text"]
+        list_to_csv(text,"example.csv")
         return redirect(url_for("index"))
 
     return render_template("index.html")
