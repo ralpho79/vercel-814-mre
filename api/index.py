@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         text = request.form["input_text"]
-        list_to_csv(text,"example.csv")
+        list_to_csv(text,"tmp/example.csv")
         return redirect(url_for("index"))
 
     return render_template("index.html")
