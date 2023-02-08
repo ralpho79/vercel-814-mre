@@ -1,0 +1,4 @@
+# vercel-814-mre
+This a minimal reproducible example for the OSError: [Errno 30] Read-only file system
+<p> https://github.com/vercel/community/discussions/814
+<p> Python, Flask, Vercel stack
