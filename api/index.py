@@ -11,7 +11,7 @@ def index():
         list_to_csv(text,"/tmp/example.csv")
         return redirect(url_for("index"))
     
-    list=csv_to_list("tmp/example.csv")
+    list=csv_to_list("/tmp/example.csv")
     return render_template("index.html",list=list)
 
 
