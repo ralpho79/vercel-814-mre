@@ -11,14 +11,16 @@ def index():
         list_to_csv(text,"/tmp/example.csv")
         return redirect(url_for("index"))
 
-    return render_template("index.html")
+    return render_template("index.html",list=list)
 
 
 def list_to_csv(list,name):
-    
     with open(name, "w", newline="") as file:
         writer = csv.writer(file)
         writer.writerows(list)
+
+def csv_to_list(f):
+    lst=[*csv.reader(open(f))]; return(lst)
 
 
 if __name__ == "__main__":
